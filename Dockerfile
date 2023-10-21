@@ -19,4 +19,4 @@ COPY . .
 EXPOSE 5000
 
 # Run gunicorn when the container launches
-CMD ["gunicorn", "--bind", "0.0.0.0:5000", "app:app"]
+CMD ["gunicorn", "-t", "300","--bind", "0.0.0.0:5000", "app:app"]
